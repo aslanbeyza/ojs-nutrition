@@ -21,6 +21,7 @@
     "@types/react-slick": "^0.23.13",
     "axios": "^1.7.7",
     "dotenv": "^16.4.7",
+    "formik": "^2.4.6",
     "js-cookie": "^3.0.5",
     "jwt-decode": "^4.0.0",
     "lucide-react": "^0.454.0",
@@ -31,7 +32,8 @@
     "react-slick": "^0.30.2",
     "react-toastify": "^10.0.6",
     "slick-carousel": "^1.8.1",
-    "typescript-cookie": "^1.0.6"
+    "typescript-cookie": "^1.0.6",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",

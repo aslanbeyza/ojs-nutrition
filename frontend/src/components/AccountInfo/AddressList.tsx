@@ -11,7 +11,7 @@ const AddressList = () => {
     loading, 
     fetchAddresses, 
     removeAddress, 
-    updateExistingAddress // Added here
+    updateExistingAddress 
   } = useAddress();
 
   const [selectedAddress, setSelectedAddress] = useState<Address | null>(null);
