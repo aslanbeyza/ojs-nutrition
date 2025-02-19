@@ -5,6 +5,7 @@ Projem yarım kaldı devam etmeyeceğim işinize yararsa kullanabilirsiniz
 ![WhatsApp Image 2024-12-24 at 17 54 58](https://github.com/user-attachments/assets/134b3997-9e1e-492f-a1f7-969ec6d7b7e7)
 ![WhatsApp Image 2024-12-24 at 17 53 58](https://github.com/user-attachments/assets/3697939d-fab5-4921-8a0d-3342799038ee)
 ![WhatsApp Image 2024-12-24 at 17 51 28](https://github.com/user-attachments/assets/00c1637c-2903-4470-a244-75556fcd9415)
+![image](https://github.com/user-attachments/assets/b2a085a2-12ab-4860-800e-325b288d4018)
 ![WhatsApp Image 2024-12-24 at 17 50 31](https://github.com/user-attachments/assets/9229b18f-0ab3-41bf-b4a0-3eb2283e9427)
 ![WhatsApp Image 2024-12-24 at 17 48 35](https://github.com/user-attachments/assets/9e4599d5-1cc4-467c-b659-a776351ac35c)
 ![WhatsApp Image 2024-12-24 at 17 47 21](https://github.com/user-attachments/assets/d63ec2f4-ea58-4a5a-adb3-6609d4b38aba)
@@ -13,15 +14,6 @@ Projem yarım kaldı devam etmeyeceğim işinize yararsa kullanabilirsiniz
 ![WhatsApp Image 2024-12-24 at 17 44 28](https://github.com/user-attachments/assets/76e1a727-b572-4bc1-ab61-4dcdb4b20331)
 ![WhatsApp Image 2024-12-24 at 17 43 18](https://github.com/user-attachments/assets/b150a6ea-eb26-4b5a-9ef2-e22f433ef7ca)
 ![WhatsApp Image 2024-12-24 at 17 38 26](https://github.com/user-attachments/assets/ffbe6347-1a66-4a96-b371-3cb348749aed)
-
-
-
-
-
-
-
-
-
 ## Unity Game Link  --  oyunumu da oynaayınn :)
 [https://play.unity.com/en/games/fc30de86-d860-4f6a-9140-7880fecefb02/oyunprogramlamaodevi](https://play.unity.com/en/games/fc30de86-d860-4f6a-9140-7880fecefb02/oyunprogramlamaodevi)
 
