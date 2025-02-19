@@ -1,5 +1,4 @@
 Projem yarım kaldı devam etmeyeceğim işinize yararsa kullanabilirsiniz 
-![WhatsApp Image 2024-12-24 at 18 37 31](https://github.com/user-attachments/assets/f98ce27d-3e4d-423d-b148-d6aa5be8d688)
 ![WhatsApp Image 2024-12-24 at 18 30 21](https://github.com/user-attachments/assets/f9003ce5-343c-4a6e-86ac-491ddfbc40de)
 ![WhatsApp Image 2024-12-24 at 18 27 34](https://github.com/user-attachments/assets/be996a16-620d-4e30-b493-80b8b4501842)
 ![WhatsApp Image 2024-12-24 at 17 54 58](https://github.com/user-attachments/assets/134b3997-9e1e-492f-a1f7-969ec6d7b7e7)
