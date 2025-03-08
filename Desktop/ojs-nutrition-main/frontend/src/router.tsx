@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import CategoryProductsPage from './components/Categories/CategoryProductsPage';
 import { ShoppingCartProvider } from './context/ShoppingCartContext';
-import { About,Account,Cart,Contact,Homepage,Page404,Payment,SSS,Login,ProductList,Detail,} from './pages'; 
+import { About,Account,Contact,Homepage,Page404,Payment,SSS,Login,ProductList,Detail,} from './pages'; 
 import { AddressProvider } from './context/AddressContext';
 
 const AppRouter = () => {
@@ -14,7 +14,6 @@ const AppRouter = () => {
                 <Route path="/" element={<MainLayout><Homepage /></MainLayout>} />
                 <Route path="/about" element={<MainLayout><About /></MainLayout>} />
                 <Route path="/login" element={<MainLayout><Login/></MainLayout>} />
-                <Route path="/cart" element={<MainLayout><Cart /></MainLayout>} />
                 <Route path="/contact" element={<MainLayout><Contact /></MainLayout>} />
                 <Route path="/account" element={<MainLayout><Account /></MainLayout>} />
                 <Route path="/payment" element={<Payment />} />

@@ -67,19 +67,22 @@ export default function VerticalLinearStepper() {
         const order = await createOrder({
           total: getTotalPrice(),
           status: "pending",
-          UserId: currentUser.id,  
+          UserId: Number(currentUser?.id),  
+          imageUrl: cartItems[0].photo_src,
         });
-          console.log("order",order);
+          console.log("createOrder",order);
         setOrderResponse(order);  // Siparişi state'e kaydet
-
+ 
        // 2. OrderItem oluştur
         await Promise.all(
           cartItems.map((item) =>
             createOrderItem({
               quantity: item.quantity,
               price: item.price,
-              OrderId: orderResponse?.OrderId, // Dönen OrderId kullanılıyor
+              OrderId: order.id, // Dönen OrderId kullanılıyor
               ProductId: item.id,
+              imageUrl: item.photo_src,
+              UserId: Number(currentUser?.id),
             })
           )
         );
@@ -132,6 +135,8 @@ export default function VerticalLinearStepper() {
         ) : (
           steps.map((step, index) => (
             <Step key={step.label}>
+
+              
               <StepLabel>
                 <Box>
                   <Typography variant="subtitle1" fontWeight="bold">
@@ -143,59 +148,62 @@ export default function VerticalLinearStepper() {
                 </Box>
               </StepLabel>
               <StepContent>
-                <Box
-                  sx={{
-                    bgcolor: "white",
-                    p: 3,
-                    borderRadius: 1,
-                    boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
-                  }}
-                >
-                  {index === 0 ? (
-                    <AddressSelection
-                      onAddressSelect={(address) => handleNext(address)}
-                    />
-                  ) : index === 1 ? (
-                    <Box>
-                      <Typography variant="body1" sx={{ mb: 2 }}>
-                        {step.description}
-                      </Typography>
-                      <Button
-                        variant="contained"
-                        onClick={() => handleNext()}
-                        sx={{
-                          bgcolor: "black",
-                          color: "white",
-                          "&:hover": { bgcolor: "black" },
-                        }}
-                      >
-                        Devam Et
-                      </Button>
-                    </Box>
-                  ) : (
-                    index === 2 &&
-                    orderResponse && (
-                      <Box>
-                        <Typography
-                          variant="body2"
-                          color="text.secondary"
-                          sx={{ mb: 2 }}
-                        >
-                          {location.search.includes("status=failure") && (
-                            <Typography variant="body1" color="error">
-                              Ödeme Başarısız! Lütfen tekrar deneyin.
-                            </Typography>
-                          )}
-                        </Typography>
-                        <CreditCardForm
-                          amount={getTotalPrice()}
-                          OrderId={orderResponse?.OrderId ?? 0}
-                        />
-                      </Box>
-                    )
-                  )}
-                </Box>
-              </StepContent>
+  <Box
+    sx={{
+      bgcolor: "white",
+      p: 3,
+      borderRadius: 1,
+      boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
+    }}
+  >
+    {index === 0 ? (
+      <AddressSelection
+        onAddressSelect={(address) => handleNext(address)}
+      />
+    ) : index === 1 ? (
+      <Box>
+        <Typography variant="body1" sx={{ mb: 2 }}>
+          {step.description}
+        </Typography>
+        <Button
+          variant="contained"
+          onClick={() => handleNext()}
+          sx={{
+            bgcolor: "black",
+            color: "white",
+            "&:hover": { bgcolor: "black" },
+          }}
+        >
+          Devam Et
+        </Button>
+      </Box>
+    ) : (
+      index === 2 && (
+        <Box>
+          {/* Eğer ödeme başarısızsa, hata mesajı göster */}
+          {paymentStatus === "failure" && (
+            <Typography variant="body1" color="error">
+              Ödeme Başarısız! Lütfen tekrar deneyin.
+            </Typography>
+          )}
+
+          {/* Eğer `orderResponse` yüklenmemişse, hata mesajı göster */}
+          {!orderResponse?.id ? (
+            <Typography variant="body2" color="error">
+              Sipariş bilgisi bulunamadı. Lütfen geri giderek tekrar deneyin.
+            </Typography>
+          ) : (
+            <CreditCardForm
+              amount={getTotalPrice()}
+              OrderId={orderResponse.id}
+            />
+          )}
+        </Box>
+      )
+    )}
+  </Box>
+</StepContent>
+
             </Step>
           ))
         )}

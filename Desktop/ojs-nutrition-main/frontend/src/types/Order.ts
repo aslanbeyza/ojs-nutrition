@@ -1,6 +1,9 @@
-export interface Order {
+export type Order = {
     id: number;
     total: number;
-    status: string;
-    UserId?: number; // Foreign key
-}
+    status:string;
+    createdAt: string; 
+    updatedAt: string; 
+    UserId?: number; 
+    imageUrl: string; 
+  };

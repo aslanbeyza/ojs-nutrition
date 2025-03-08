@@ -6,4 +6,6 @@ export interface OrderItem {
     ProductId?: number; // Foreign key
     variantId: number; // Eklenen alan
     quantity: number; // quantity ekliyoruz
+    imageUrl?: string;
+    UserId?: number;
 }

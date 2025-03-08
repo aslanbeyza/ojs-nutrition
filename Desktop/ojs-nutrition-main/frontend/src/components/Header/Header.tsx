@@ -16,7 +16,6 @@ import {useRef} from 'react';
 import { searchProducts } from '../../services/productService';
 import { useUser } from '../../context/UserContext';
 
-
 const categories = [
   { id: 1, name: "PROTEİN", title: "protein" },
   { id: 2, name: "SPOR GIDALARI", title: "spor-gidalari" },
@@ -50,6 +49,7 @@ const Header: React.FC = () => {
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
   const { user, setUser } = useUser();
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchContainerRef.current && !searchContainerRef.current.contains(event.target as Node)) {
@@ -404,28 +404,6 @@ const Header: React.FC = () => {
               <Typography sx={{ color: "black" }}>
                 <ArrowForwardIosIcon />
               </Typography>
-            </ListItem>
-          </List>
-        </Box>
-
-        {/* Alt Kısım: Diğer Linkler */}
-        <Box
-          sx={{
-            padding: "10px 0",
-            textAlign: "center",
-            color: "black",
-            backgroundColor: "#E5E5E5",
-          }}
-        >
-          <List>
-            <ListItem>
-              <ListItemText primary="Hesabım" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Müşteri Yorumları" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="İletişim" />
             </ListItem>
           </List>
         </Box>

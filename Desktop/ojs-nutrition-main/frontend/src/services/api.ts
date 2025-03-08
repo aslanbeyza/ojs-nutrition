@@ -13,6 +13,7 @@ export const endpoints = {
     product: `${BASE_URL}/product`,
     review: `${BASE_URL}/review`,
     order: `${BASE_URL}/order`,
+    orderUser: `${BASE_URL}/order/user`,
     orderItem: `${BASE_URL}/orderItem`,
     payment: {
         base: `${BASE_URL}/payment`,

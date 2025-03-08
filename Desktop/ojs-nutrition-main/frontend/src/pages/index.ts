@@ -1,6 +1,5 @@
 export { default as About } from './About';
 export { default as Account } from './Account';
-export { default as Cart } from './Cart';
 export { default as Contact } from './Contact';
 export { default as Homepage } from './Homepage';
 export { default as Page404 } from './Page404';

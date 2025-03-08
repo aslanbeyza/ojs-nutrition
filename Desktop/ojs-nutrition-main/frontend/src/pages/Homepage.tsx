@@ -29,7 +29,7 @@ const Homepage = () => {
     <div>
       <Box
         sx={{
-          mt: { xs: "-5px", sm: "0px", md: "0px" },
+          mt: { xs: "-5px", sm: "-30px", md: "-30px" },
           width: "100%",
           height: "auto",
           overflow: "hidden",
@@ -40,7 +40,7 @@ const Homepage = () => {
           alt="Banner"
           style={{
             width: "100%",
-            height: "400px",
+            height: "500px",
             objectFit: "cover",
           }}
         />

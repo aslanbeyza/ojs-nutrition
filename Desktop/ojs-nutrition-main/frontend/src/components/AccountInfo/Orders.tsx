@@ -1,28 +1,19 @@
 import {Box, Typography, Grid, Button } from "@mui/material";
 import { useEffect, useState } from "react";
 import { getOrders } from "../../services/orderService";
+import { Order } from "../../types/Order";
 
-type Orders = {
-  id: number;
-  total: number;
-  status: "pending" | "completed" | "cancelled"; // Status için olası değerler
-  createdAt: string; 
-  updatedAt: string; 
-  UserId: number | null; 
-  title: string; 
-  imageUrl: string; 
-  orderNumber: string; 
-  date: string; 
-};
+
 
 const Orders = () => {
-  const [orders, setOrders] = useState<Orders[]>([]);
+  const [orders, setOrders] = useState<Order[]>([]);
 
   useEffect(() => {
     const fetchOrders = async () => {
-      const response = await getOrders(); // API çağrısı
+      const response = await getOrders();
+      console.log("Gelen Siparişler:", response); 
       setOrders(response);
-      console.log("first order", response);
+      console.log("first ordesdsr", response);
     };
     fetchOrders();
   }, []);
@@ -33,12 +24,10 @@ const Orders = () => {
     {orders?.map((order) => (
       <Grid item xs={12} key={order.id}>
         <Box sx={{ display: "flex", alignItems: "center", borderBottom: "1px solid #E5E5E5", paddingBottom: 2, marginBottom: 2 }}>
-          <Box component="img" src={order.imageUrl} alt={order.title} sx={{ width: 50, height: 50, marginRight: 2 }} />
+          <Box component="img" src={order.imageUrl} sx={{ width: 50, height: 50, marginRight: 2 }} />
           <Box sx={{ flex: 1 }}>
-            <Typography variant="body1" sx={{ fontWeight: "bold" }}>{order.title}</Typography>
-            <Typography variant="body2" color="textSecondary">{order.date} Tarihinde Sipariş Verildi</Typography>
-            <Typography variant="body2" color="textSecondary">{order.orderNumber} numaralı sipariş</Typography>
-            <Typography variant="body2" color="green">{order.status}</Typography>
+            <Typography variant="body2" color="textSecondary">{order.createdAt} Tarihinde Sipariş Verildi</Typography>
+            <Typography variant="body2" color="textSecondary">{order.id} numaralı sipariş</Typography>
           </Box>
           <Button variant="outlined">Detay Görüntüle</Button>
         </Box>

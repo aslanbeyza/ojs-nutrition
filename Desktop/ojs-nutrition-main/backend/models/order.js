@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
             defaultValue: "pending",
             enum: ["pending", "completed", "cancelled"]
         },
+        imageUrl: { type: DataTypes.STRING,allowNull: true,}
     });
-
     return Order;
 }

@@ -11,7 +11,7 @@ export const getOrderItemById = async (orderItemId: number) => {
 };
 
 // Yeni bir sipariş öğesi eklemek için
-export const addOrderItem = async (orderItemData: { productId: number; quantity: number }) => {
+export const addOrderItem = async (orderItemData: { productId: number; quantity: number; }) => {
     console.log("Gönderilen addOrderItem:", orderItemData); 
     return await apiRequest('POST', '/orderItem', orderItemData);
 };
